@@ -1,0 +1,74 @@
+.navigation {
+    margin-left: auto;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    position: static;
+    width: auto;
+    background: none;
+}
+
+.hamburger {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #000000;
+}
+
+.navigation h1 {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0px 7px;
+}
+
+.nav-links-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    background-color: #ffffff;
+    display: none;
+}
+
+.nav-links-wrapper .nav-link {
+    display: block;
+    text-align: left;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.nav-links-wrapper .nav-link:hover, a:focus {
+  background-color: #ff9776;
+}
+
+.expanded {
+    display: unset;
+}
+
+@media screen and (min-width: 636px) {
+    .nav-links-wrapper {
+        position: static;
+        width: auto;
+        display: flex;
+    }
+
+    .navigation .nav-link { 
+        display: inline-block;
+        padding: 25px 15px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}

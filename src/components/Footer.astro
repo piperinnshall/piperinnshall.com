@@ -1,0 +1,20 @@
+---
+import Social from './Social.astro';
+
+const u1 = "piperinnshall";
+---
+
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
+
+<footer>
+    <Social platform="twitter" username={u1}/>
+    <Social platform="github" username={u1}/>
+    <Social platform="instagram" username={u1}/>
+</footer>
+
