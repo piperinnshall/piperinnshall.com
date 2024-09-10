@@ -3,7 +3,6 @@
     margin-right: 2rem;
     display: flex;
     justify-content: space-between;
-    position: absolute;
     position: static;
     width: auto;
     background: none;
