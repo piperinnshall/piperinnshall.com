@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: My Second Blog Post
-author: Astro Learner
-description: "After learning some Astro, I couldn't stop!"
+author: Rick Astley 
+description: "idk y i keep doing this!"
 image:
-    url: "https://docs.astro.build/assets/arc.webp"
-    alt: "The Astro logo on a dark background with a purple gradient arc."
-pubDate: 2024-09-09
-tags: ["astro", "blogging", "learning in public", "successes"]
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Glasto2023_%28149_of_468%29_%2853009108914%29_%28cropped%29.jpg/1200px-Glasto2023_%28149_of_468%29_%2853009108914%29_%28cropped%29.jpg' 
+    alt: 'got u again'
+pubDate: 2024-09-11
+tags: ["rick", "roll" ] 
 ---
-After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
+hmmm

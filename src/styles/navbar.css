@@ -1,11 +1,5 @@
-.navigation {
-    margin-left: auto;
-    margin-right: 2rem;
-    display: flex;
-    justify-content: space-between;
-    position: static;
-    width: auto;
-    background: none;
+nav {
+    height: 80px;
 }
 
 .hamburger {
@@ -23,6 +17,12 @@
     background-color: #000000;
 }
 
+.navigation {
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .navigation h1 {
     display: inline-block;
     font-size: 2rem;
@@ -33,7 +33,7 @@
     position: absolute;
     width: 100%;
     top: 4rem;
-    background-color: #ffffff;
+    background-color: #f1f5f9;
     display: none;
 }
 
@@ -47,9 +47,8 @@
     text-transform: lowercase;
 }
 
-.nav-links-wrapper .nav-link:hover, a:focus {
-  background-color: #ff9776;
-}
+/*.nav-links-wrapper .hover, a:focus {*/
+/*}*/
 
 .expanded {
     display: unset;
@@ -63,7 +62,6 @@
     }
 
     .navigation .nav-link { 
-        display: inline-block;
         padding: 25px 15px;
     }
 
