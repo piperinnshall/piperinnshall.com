@@ -1,13 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+import github from '../images/square-github.svg';
+import linkedin from '../images/linkedin.svg';
+import twitter from '../images/square-twitter.svg';
+import instagram from '../images/square-instagram.svg';
 const { platform, username } = Astro.props;
----
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
 
-<style>
-    a {
-        padding: 0.5rem 1rem;
-        color: white;
-        background-color: #4c1d95;
-        text-decoration: none;
-    }
-</style>
+const imageMap = {
+    github,
+    linkedin,
+    twitter,
+    instagram,
+};
+---
+<a class="social-link" href={`https://www.${platform}.com/${username}`}>
+    <Image src={imageMap[platform]} alt={platform} width='50' height='50' />
+</a>

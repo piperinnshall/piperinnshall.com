@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+const pageTitle = "About";
+const pageHeader= "About Me";
 
 
 const identity = {
@@ -11,24 +12,8 @@ hobbies: ["programming", "guitar", "karate"],
 };
 
 const skills = ["HTML", "JavaScript", "SQL",  "Astro", "C", "Java", "Kotlin", "Lua", "Python"];
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
-
-<style define:vars={{skillColor, fontWeight, textCase}}>
-    h1 {
-        color: purple;
-        font-size: 4rem;
-    }
-    .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);  
-    }
-</style>
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle}, pageHeader={pageHeader}>
     <p>Here are a few facts about me:</p>
     <ul>
         <li>My name is {identity.firstName}.</li>

@@ -1,14 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0 auto;
+}
+
 html {
     background-color: #f1f5f9;
     font-family: sans-serif;
 }
 
 body {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 80ch;
     line-height: 1.5;
-    position: relative;
+}
+
+main {
+    flex: 1;
+    padding-left: 1rem;
 }
 
 * {
@@ -16,17 +26,7 @@ body {
 }
 
 h1 {
-    padding-top: 1rem;
     padding-left: 1rem;
-    margin: 1rem 0;
     font-size: 2.5rem;
-}
-
-footer {
-    padding-left: 1rem;
-}
-
-.slot {
-    padding-left: 1rem;
 }
 
