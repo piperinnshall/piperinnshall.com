@@ -1,8 +1,93 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "piper inns hall" 
-const pageHeader = "Piper";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Piper Inns Hall";
+const pageHeader = "Piper Inns Hall";
+const email = "contact@piperinnshall.com";
+const cv = "/Piper Inns Hall CV.pdf"
+const github = "https://github.com/piperinnshall";
 ---
-<BaseLayout pageTitle={pageTitle}, pageHeader={pageHeader}>
-    <h2>Student at Victoria University</h2>
+
+<BaseLayout pageTitle={pageTitle} pageHeader={pageHeader}>
+    <h2>
+        First-year Computer Science student passionate about technology,
+        programming, and creative problem-solving.
+    </h2>
+    <p>
+        I'm a Computer Science student at Victoria University of Wellington with
+        experience in software development. I'm passionate about solving
+        challenges through technology, and I love working on diverse projects,
+        from server computers to building custom keyboards.
+    </p>
+
+    <div class="button-container">
+        <a
+            href={cv}
+            download
+            class="button button-cv"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Download CV
+        </a>
+
+        <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-github"
+        >
+            View GitHub
+        </a>
+
+        <a href={`mailto:${email}`} class="button button-email"> Contact Me </a>
+    </div>
 </BaseLayout>
+
+<style>
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .button-cv {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .button-cv:hover {
+        background-color: #0056b3;
+    }
+
+    .button-github {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .button-github:hover {
+        background-color: #1e7a35;
+    }
+
+    .button-email {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .button-email:hover {
+        background-color: #e0a800;
+    }
+</style>
