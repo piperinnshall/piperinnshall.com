@@ -8,22 +8,23 @@ const { pageHeader } = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <Header />
-        <h1>{pageHeader}</h1>
-        <main>
-            <slot />
-        </main>
-        <Footer />
-        <script>
-            import "../scripts/menu.js";
-        </script>
-    </body>
-</html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <Header />
+<script>
+  import "../scripts/menu.js";
+</script>
+</html<body>
+  <div class="card">
+    <h1>{pageHeader}</h1>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</body>

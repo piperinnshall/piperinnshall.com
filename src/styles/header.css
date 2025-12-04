@@ -1,6 +1,11 @@
+:root {
+  --nav-height-mobile: 60px;
+  --nav-height-desktop: 100px;
+}
+
 /* NAV BAR CONTAINER */
 nav {
-  height: 80px;
+  height: var(--nav-height-mobile);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,43 +18,52 @@ nav {
   right: 20px;
   top: 20px;
   cursor: pointer;
+  width: 25px;
+  height: 20px;
 }
 
 .hamburger .line {
   display: block;
-  width: 20px;
+  width: 100%;
   height: 3px;
   margin-bottom: 5px;
   background-color: #000000;
 }
 
-/* NAV PILL WRAPPER (big oval around all links) */
+/* NAV PILL WRAPPER (outer oval around all links) */
 .nav-links-wrapper {
   display: flex;
-  gap: 1rem;
-  padding: 10px 30px;        /* more padding for the outer oval */
-  border-radius: 999px;      /* makes the big oval */
-  background-color: #e2e8f0; /* outer oval color */
+  gap: 0.9rem;             
+  padding: 4px 8px;       
+  border-radius: 999px;    
+  background-color: #e2e8f0; 
   display: none;
-  justify-content: center;   /* center links inside the big oval */
+  justify-content: center;
   align-items: center;
 }
 
 /* NAV LINKS (individual link styling) */
 .nav-links-wrapper .nav-link {
-  padding: 8px 16px;
+  padding: 4px 8px;        
   text-decoration: none;
   color: #000000;
   font-size: 1.1rem;
   font-weight: bold;
-  border-radius: 999px;       /* optional: keeps link pill shape for active */
+  border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for all links */
+.nav-links-wrapper .nav-link:hover {
+  background-color: #cbd5e1; 
 }
 
 /* ACTIVE PAGE OVAL */
 .nav-link.active {
   background-color: #000000;
   color: #ffffff;
+  padding: 6px 10px;       
+  border-radius: 999px;
 }
 
 /* EXPANDED MOBILE MENU */
@@ -57,16 +71,25 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 30px;        /* keep same outer oval padding for mobile */
-  border-radius: 999px;
-  background-color: #f1f5f9;
+  top: var(--nav-height-mobile); /* now matches nav height */
+  left: 0;             
+  width: 100%;         
+  height: auto;        
+  padding: 0.5rem 0;   
+  border-radius: 0;    
+  background-color: #e2e8f0;
+  justify-content: flex-start; 
+  align-items: center; 
+  z-index: 999;
 }
 
 /* DESKTOP MODE */
 @media screen and (min-width: 636px) {
+
+  nav {
+    height: var(--nav-height-desktop);
+  }
+
   .nav-links-wrapper {
     display: flex;
     position: static;
