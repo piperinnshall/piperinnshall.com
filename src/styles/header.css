@@ -1,70 +1,80 @@
+/* NAV BAR CONTAINER */
 nav {
-    height: 80px;
-    margin-right: 2rem;
-    display: flex;
-    justify-content: space-between;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.nav-header {
-    display: inline-block;
-    font-size: 2rem;
-    padding: 0px 7px;
-    margin: 1rem 0;
-}
-        
+/* HAMBURGER BUTTON */
 .hamburger {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
 }
 
 .hamburger .line {
-    display: block;
-    width: 20px;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: #000000;
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #000000;
 }
 
+/* NAV PILL WRAPPER (big oval around all links) */
 .nav-links-wrapper {
-    position: absolute;
-    width: 100%;
-    top: 4rem;
-    background-color: #f1f5f9;
-    display: none;
+  display: flex;
+  gap: 1rem;
+  padding: 10px 30px;        /* more padding for the outer oval */
+  border-radius: 999px;      /* makes the big oval */
+  background-color: #e2e8f0; /* outer oval color */
+  display: none;
+  justify-content: center;   /* center links inside the big oval */
+  align-items: center;
 }
 
+/* NAV LINKS (individual link styling) */
 .nav-links-wrapper .nav-link {
-    display: block;
-    text-align: left;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: lowercase;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 999px;       /* optional: keeps link pill shape for active */
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/*.nav-links-wrapper .hover, a:focus {*/
-/*}*/
+/* ACTIVE PAGE OVAL */
+.nav-link.active {
+  background-color: #000000;
+  color: #ffffff;
+}
 
+/* EXPANDED MOBILE MENU */
 .expanded {
-    display: unset;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;        /* keep same outer oval padding for mobile */
+  border-radius: 999px;
+  background-color: #f1f5f9;
 }
 
+/* DESKTOP MODE */
 @media screen and (min-width: 636px) {
-    .nav-links-wrapper {
-        position: static;
-        width: auto;
-        display: flex;
-    }
+  .nav-links-wrapper {
+    display: flex;
+    position: static;
+    transform: none;
+  }
 
-    .nav-links-wrapper .nav-link { 
-        padding: 25px 15px;
-    }
-
-    .hamburger {
-        display: none;
-    }
+  .hamburger {
+    display: none;
+  }
 }
+
