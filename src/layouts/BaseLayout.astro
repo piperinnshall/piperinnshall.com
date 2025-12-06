@@ -1,7 +1,6 @@
 ---
 import NavBar from '../components/NavBar.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
 import '../styles/global.css';
 
 const { pageTitle, pageHeader } = Astro.props;
@@ -18,16 +17,10 @@ const { pageTitle, pageHeader } = Astro.props;
 
   <body>
     <NavBar />
-    <div class="card">
-      <Header header={pageHeader} />
-      <main>
-        <slot />
-      </main>
-      <Footer />
-    </div>
-<script> 
-  import "../scripts/menu.js"; 
-</script>
+    <Card pageHeader={pageHeader}>
+      <slot />
+    </Card>
+    <script>import "../scripts/menu.js";</script>
   </body>
 </html>
 
