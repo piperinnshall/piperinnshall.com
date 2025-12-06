@@ -30,7 +30,7 @@ nav {
   background-color: #000000;
 }
 
-/* NAV PILL WRAPPER (outer oval around all links) */
+/* NAV PILL WRAPPER */
 .nav-links-wrapper {
   display: flex;
   gap: 0.9rem;             
@@ -42,19 +42,19 @@ nav {
   align-items: center;
 }
 
-/* NAV LINKS (individual link styling) */
+/* NAV LINKS */
 .nav-links-wrapper .nav-link {
   padding: 4px 8px;        
   text-decoration: none;
   color: #000000;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 400;          /* normal weight, not bold */
   border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Hover effect for all links */
-.nav-links-wrapper .nav-link:hover {
+/* Hover effect */
+.nav-links-wrapper .nav-link:not(.active):hover {
   background-color: #cbd5e1; 
 }
 
@@ -64,6 +64,7 @@ nav {
   color: #ffffff;
   padding: 6px 10px;       
   border-radius: 999px;
+  font-weight: 400;           /* keep active link normal weight */
 }
 
 /* EXPANDED MOBILE MENU */
@@ -71,7 +72,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: var(--nav-height-mobile); /* now matches nav height */
+  top: var(--nav-height-mobile);
   left: 0;             
   width: 100%;         
   height: auto;        

@@ -6,7 +6,6 @@ const pageTitle = "Blog"
 const pageHeader = "My Blog"
 ---
 <BaseLayout pageTitle={pageTitle}, pageHeader={pageHeader}>
-  <p>This is my blog.</p>
   <ul>
     {allPosts.map((post) => <ProjectPost url={post.url} title={post.frontmatter.title} />)}
   </ul>

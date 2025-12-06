@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Second Blog Post
+title: Next Project
 author: Rick Astley 
 description: "idk y i keep doing this!"
 image:
