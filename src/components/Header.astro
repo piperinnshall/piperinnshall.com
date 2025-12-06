@@ -1,11 +1,9 @@
 ---
-import Navigation from './Navigation.astro';
-import Hamburger from './Hamburger.astro';
-import '../styles/header.css';
+import Socials from './Socials.astro';
+import '../styles/social.css';
+const { header } = Astro.props;
+
 ---
-<header>
-    <nav>
-        <Hamburger />
-        <Navigation />
-    </nav>
-</header<>
+
+<h1>{header}</h1>
+<Socials></Socials>

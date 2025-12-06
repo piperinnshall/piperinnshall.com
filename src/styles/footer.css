@@ -1,14 +1,14 @@
 footer {
+    border-top: 1px solid #a2a2a2;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 footer .copyright {
-    border-top: 1px solid #000;
-    padding-top: 1rem;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     text-align: center;
+    color: #a2a2a2;
     width: 100%; 
 }
 
