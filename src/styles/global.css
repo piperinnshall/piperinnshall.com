@@ -2,19 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 :root {
-  --color-background: #f1f5f9;
-  --color-card-background: #ffffff;
-  --color-nav-background: #e2e8f0;
+  /* Base */
+  --color-background: #1e1e2e;
+  --color-background-2: #181825;
 
-  --color-nav-link-hover: #cbd5e1;
-  --color-nav-link-active-bg: #000000;
+  --color-text: #cdd6f4;
+  --color-text-2: #6c7086; 
+  
+  --color-border: #cba6f7;
+  --color-shadow: #11111b;
 
-  --color-nav-link-active-text: #ffffff;
-  --color-header-subtitle: #555555;
-  --color-text: #000000;
+  --color-header-subtitle: #a6adc8;
 
-  --color-border: #a2a2a2;
+  --color-card-background: var(--color-background); 
+  --color-card-social: var(--color-background); 
+  --color-nav-background: var(--color-background-2); 
+  --color-nav-link-active-bg: var(--color-border);
 
+  --color-nav-link-active-text: var(--color-background); 
+  --color-copyright-text: var(--color-text-2);
+  --color-nav-link-hover: var(--color-text-2);
 }
 
 /* Reset box-sizing */

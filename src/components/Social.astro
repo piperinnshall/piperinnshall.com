@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import github from '../images/github.svg';
 import linkedin from '../images/linkedin.svg';
+
 const { platform, username } = Astro.props;
 
 const images = {
@@ -9,6 +10,8 @@ const images = {
     linkedin,
 };
 ---
+
 <a class="social-link" href={`https://www.${platform}.com/${username}`}>
-    <Image src={images[platform]} alt={platform} width='50' height='50' />
+  <div class="icon" style={`--icon-url: url('${images[platform].src}')`}></div>
 </a>
+
