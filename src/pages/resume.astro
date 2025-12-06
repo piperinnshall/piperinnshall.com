@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Piper Inns Hall";
-
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <p>- Embed resume here -</p>
+  <embed 
+    src="/resume.pdf" 
+    type="application/pdf" 
+    class="pdf-viewer"
+  />
 </BaseLayout>
