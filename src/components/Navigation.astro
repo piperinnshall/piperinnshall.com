@@ -1,8 +1,10 @@
 ---
+const currentPath = Astro.url.pathname;
 ---
-<h1 class="nav-header">Piper</h1>
+
 <div class="nav-links-wrapper">
-    <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="/about/">About</a>
-    <a class="nav-link" href="/blog/">Blog</a>
+  <a class={`nav-link ${currentPath === '/resume/' ? 'active' : ''}`} href="/resume/">Resume</a>
+  <a class={`nav-link ${currentPath === '/' ? 'active' : ''}`} href="/">Home</a>
+  <a class={`nav-link ${currentPath === '/projects/' ? 'active' : ''}`} href="/projects/">Projects</a>
 </div>
+

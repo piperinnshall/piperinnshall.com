@@ -1,22 +1,15 @@
 footer {
+    border-top: 1px solid #a2a2a2;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.copyright {
-    font-size: 0.8rem;
+footer .copyright {
+    font-size: 0.7rem;
+    text-align: center;
+    color: #a2a2a2;
+    width: 100%; 
 }
 
-.social .social-link {
-    margin-top: 2rem;
-    padding: 0.5rem 0.5rem;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 450px) {
-    footer {
-        justify-content: space-between;
-        flex-direction: row;
-    }
-}
+@media screen and (min-width: 450px) {}

@@ -1,0 +1,40 @@
+.social-card {
+  display: inline-flex;          /* shrink to content and allow horizontal layout */
+  align-items: center;           /* center vertically */
+  justify-content: center;       /* optional, center content horizontally */
+  padding: 0.75rem 1.5rem;       /* padding around icons */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: var(--color-card, #fff);
+  line-height: 0;                /* remove extra spacing from inline elements */
+  width: max-content;            /* ensures width wraps tightly around children */
+  max-width: none;
+}
+
+.social-card .social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the links inline-flex for consistent layout */
+.social-card .social-link {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Icon hover effect */
+.social-card .social-link img {
+  display: block;
+  transition: transform 0.2s ease;
+  width: 32px;
+  height: 32px;
+}
+
+.social-card .social-link:hover img {
+  transform: scale(1.08);
+

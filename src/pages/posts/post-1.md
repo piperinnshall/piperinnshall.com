@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
+title: 'Project A'
 pubDate: 2024-09-11
-description: 'This is the first post of my new blog.'
+description: 'This is my first project'
 author: 'Piper Inns Hall'
 image:
     url: 'https://scg-static.starcitygames.com/articles/2024/06/28524b09-rick-astley.jpg'

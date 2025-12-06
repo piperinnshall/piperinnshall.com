@@ -1,11 +1,14 @@
 ---
-import Navigation from './Navigation.astro';
-import Hamburger from './Hamburger.astro';
+import Socials from './Socials.astro';
 import '../styles/header.css';
 ---
-<header>
-    <nav>
-        <Hamburger />
-        <Navigation />
-    </nav>
-</header<>
+
+<header class="header-container">
+  <div class="header-text">
+    <div class="header-title">Piper Inns Hall</div>
+    <div class="header-subtitle">CS Student | CS Tutor @ Victoria University of Wellington</div>
+  </div>
+
+  <Socials />
+</header>
+
