@@ -2,22 +2,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 16px;
+   padding: 0.35rem 0.6rem;
+  border-radius: 9px;            /* nice round corners */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   background-color: var(--color-card, #fff);
   line-height: 0;
   width: max-content;
-  max-width: none;
 }
 
 .social-card .social-links {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.1rem;
-  margin: 0;
-  padding: 0;
+  gap: 0.75rem; 
 }
 
 .social-card .social-link {
@@ -28,12 +25,44 @@
 
 .social-card .social-link img {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 24px;                    /* smaller mobile icons */
+  height: 24px;
   transition: transform 0.2s ease;
 }
 
 .social-card .social-link:hover img {
   transform: scale(1.08);
+}
+
+@media (min-width: 601px) {
+  .header-container {
+    flex-direction: row;          /* left text | right socials */
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .header-text {
+    align-items: flex-start;
+  }
+
+  .header-title,
+  .header-subtitle {
+    text-align: left;
+  }
+
+  .social-card {
+    padding: 0.75rem 1.5rem;      /* larger desktop padding */
+     padding: 0.55rem 0.8rem;
+  }
+
+  .social-card .social-links {
+    gap: 1.0rem;                  /* larger desktop gap */
+  }
+
+  .social-card .social-link img {
+    width: 25px;                  /* larger desktop icons */
+    height: 25px;
+  }
 }
 

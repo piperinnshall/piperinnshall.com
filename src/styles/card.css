@@ -1,9 +1,9 @@
 /* Card component styling */
 .card {
   background-color: #ffffff; /* card background */
-  border-radius: 16px;
+  border-radius: 9px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 1rem 1rem 0rem 1rem;
   margin: 0 auto 2rem auto; /* top margin set to 0 */
   width: 95%;
   max-width: 120ch;
@@ -27,3 +27,7 @@
   padding-bottom: 1rem;
 }
 
+@media (min-width: 601px) {
+  .card {
+    padding: 1rem 2rem 0rem 2rem;
+  }
