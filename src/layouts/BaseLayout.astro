@@ -4,8 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { pageTitle } = Astro.props;
-const { pageHeader } = Astro.props;
+const { pageTitle, pageHeader } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,12 +16,9 @@ const { pageHeader } = Astro.props;
     <title>{pageTitle}</title>
   </head>
 
-  <NavBar />
-<script>
-  import "../scripts/menu.js";
-</script>
+  <body>
+    <NavBar />
 
-  </html<body>
     <div class="card">
       <Header header={pageHeader} />
       <main>
@@ -30,4 +26,8 @@ const { pageHeader } = Astro.props;
       </main>
       <Footer />
     </div>
+
+    <script type="module" src="../scripts/menu.js" client:load></script>
   </body>
+</html>
+
