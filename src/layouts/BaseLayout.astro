@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar.astro';
 import Card from '../components/Card.astro';
 import '../styles/global.css';
 
-const { pageTitle, pageHeader } = Astro.props;
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,7 +17,7 @@ const { pageTitle, pageHeader } = Astro.props;
 
   <body>
     <NavBar />
-    <Card pageHeader={pageHeader}>
+    <Card>
       <slot />
     </Card>
     <script>import "../scripts/menu.js";</script>

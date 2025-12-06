@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About";
-const pageHeader= "About Me";
+const pageTitle = "Resume";
 
 
 const identity = {
@@ -12,6 +11,6 @@ hobbies: ["programming", "guitar", "karate"],
 };
 
 ---
-<BaseLayout pageTitle={pageTitle}, pageHeader={pageHeader}>
+<BaseLayout pageTitle={pageTitle}>
   <p>- Embed resume here -</p>
 </BaseLayout>

@@ -3,11 +3,10 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 import '../styles/card.css';
 
-const { pageHeader } = Astro.props;
 ---
 
 <div class="card">
-  {pageHeader && <Header header={pageHeader} />}
+  <Header/>
     <main>
       <slot />
     </main>
