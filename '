@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Piper Inns Hall";
+---
+<BaseLayout pageTitle={pageTitle}>
+  <p>
+  Interested in systems programming and developer tooling. Working primarily in
+  Rust for low-level systems, Lua for developer tooling, and Java.
+ 
+  Currently pursuing
+  Computer Science studies and seeking impactful roles where I can apply
+  rigorous problem-solving skills.
+  </p>
+  <p>
+  My work spans <strong>low-level programming, cloud infrastructure, and automation</strong>, 
+  with an emphasis on making software <strong>efficient, reliable, and maintainable</strong>. 
+  I like analyzing systems from the ground up, identifying improvements, and continuously expanding 
+  my understanding of technology.
+  </p>
+  <p>
+  Based in Wellington, New Zealand. I contribute to open source when I find
+  something worth building, and I'm always looking to understand systems from
+  the ground up. Feel free to reach me via
+  <a href="mailto:piper.innshall@gmail.com" style="color:#60a5fa; text-decoration: underline;">piper.innshall@gmail.com</a>.
+  </p>
+</BaseLayout>
+
