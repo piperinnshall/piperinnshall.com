@@ -5,7 +5,6 @@
 
 nav {
   margin: 0 auto;
-  margin-left: 1rem;
   height: var(--nav-height-mobile);
   display: flex;
   justify-content: space-between;
@@ -21,6 +20,7 @@ nav {
   font-weight: 500;
   color: var(--color-text);
   font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .home-button {
@@ -36,7 +36,7 @@ nav {
 
 /* NAV LINKS */
 .nav-links-wrapper {
-  display: flex; /* visible on desktop */
+  display: flex;
   gap: 1.2rem;
   align-items: center;
 }
