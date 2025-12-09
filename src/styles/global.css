@@ -12,6 +12,7 @@
   --color-background-2: #181825;
 
   --color-highlight: #cba6f7;
+  --color-hover: #f38ba8;
   --color-text: #cdd6f4;
   --color-text-2: #6c7086; 
   
@@ -83,6 +84,12 @@ a {
   text-decoration-color: var(--color-highlight);
   font-weight: normal;
   transition: color 0.3s ease;
+}
+
+
+a:hover {
+  color: var(--color-hover);
+  text-decoration-color: var(--color-hover);
 }
 
 .pdf-viewer {

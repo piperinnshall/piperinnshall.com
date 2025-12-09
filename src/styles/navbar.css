@@ -3,19 +3,18 @@
   --nav-height-desktop: 70px;
 }
 
-/* NAVBAR */
 nav {
   margin: 0 auto;
+  margin-left: 1rem;
   height: var(--nav-height-mobile);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   width: 95%;
-  max-width: 115ch;
+  max-width: 110ch;
 }
 
-/* LEFT-SIDE PATH / LOGO */
 .path {
   display: flex;
   align-items: center;
@@ -26,8 +25,9 @@ nav {
 
 .home-button {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-highlight);
   font-weight: 500;
+  transition: opacity 1.2s ease;
 }
 
 .home-button:hover {
@@ -46,11 +46,11 @@ nav {
   color: var(--color-text);
   font-size: 1.1rem;
   font-weight: 400;
-  transition: opacity 0.2s ease;
+  transition: color 1.2s ease;
 }
 
 .nav-links-wrapper .nav-link:hover {
-  opacity: 0.6;
+  color: var(--color-highlight);
 }
 
 .nav-link.active {
@@ -104,6 +104,8 @@ nav {
 @media screen and (min-width: 636px) {
   nav {
     height: var(--nav-height-desktop);
+    padding: 1rem 0rem -1rem 0rem;
+    margin: 0 auto 1.0rem auto;
   }
 
   .nav-links-wrapper {
