@@ -34,7 +34,6 @@ nav {
   opacity: 0.6;
 }
 
-/* NAV LINKS */
 .nav-links-wrapper {
   display: flex;
   gap: 1.2rem;
@@ -56,9 +55,8 @@ nav {
 .nav-link.active {
 }
 
-/* HAMBURGER MENU - MOBILE ONLY */
 .hamburger {
-  display: none; /* hidden by default */
+  display: none;
   position: absolute;
   right: 20px;
   top: 20px;
@@ -75,33 +73,35 @@ nav {
   background-color: var(--color-text);
 }
 
-/* MOBILE ADJUSTMENTS */
 @media screen and (max-width: 635px) {
   .hamburger {
-    display: block; /* show hamburger on mobile */
+    display: block;
   }
 
   .nav-links-wrapper {
-    display: none; /* hide links by default on mobile */
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: var(--nav-height-mobile);
     left: 0;
     width: 100%;
-    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
     background-color: var(--color-background, #fff);
-    padding: 1rem 0;
+    padding: 0;
     gap: 1rem;
     z-index: 999;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    border-bottom: none;
   }
 
-  /* When menu is expanded */
   .nav-links-wrapper.expanded {
-    display: flex;
+    max-height: 500px;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--color-border);
   }
 }
 
-/* DESKTOP */
 @media screen and (min-width: 636px) {
   nav {
     height: var(--nav-height-desktop);
@@ -110,13 +110,17 @@ nav {
   }
 
   .nav-links-wrapper {
-    display: flex; /* keep original desktop look */
+    display: flex;
     position: static;
     flex-direction: row;
   }
 
   .hamburger {
-    display: none; /* hide hamburger on desktop */
+    display: none;
+  }
+
+  .path {
+    margin-left: 0rem;
   }
 }
 
