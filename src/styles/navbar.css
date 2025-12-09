@@ -97,6 +97,7 @@ nav {
   /* When menu is expanded */
   .nav-links-wrapper.expanded {
     display: flex;
+    border-bottom: 1px solid var(--color-border);
   }
 }
 
