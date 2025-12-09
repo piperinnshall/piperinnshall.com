@@ -89,35 +89,10 @@ a {
   flex: 1;
   width: 100%;
   border: none;
-
-  /* Rounded corners */
-  /* border-radius: 9px; */
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
-  overflow: hidden; /* REQUIRED for the rounding to actually clip */
-}
-
-.card {
-  background-color: var(--color-card-background);
-  color: var(--color-text);
-
-  border-radius: 9px;
-  border: 1px solid var(--color-border);
-  padding: 1rem 1rem 0rem 1rem;
-  margin: 0 auto 0.5rem auto;
-  width: 95%;
-  max-width: 125ch;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0; /* THIS IS CRITICAL - allows card to be constrained and enables scrolling */
-  line-height: 1.5;
-  font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 601px) {
-  .card {
-    padding: 1rem 2rem 0rem 2rem;
-    margin: 0 auto 2.0rem auto;
-  }
 }
