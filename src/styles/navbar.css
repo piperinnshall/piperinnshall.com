@@ -3,6 +3,7 @@
   --nav-height-desktop: 100px;
 }
 
+/* NAVBAR */
 nav {
   height: var(--nav-height-mobile);
   display: flex;
@@ -28,11 +29,32 @@ nav {
   background-color: var(--color-text);
 }
 
+.path {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.home-button {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.home-button:hover {
+  text-decoration: underline;
+}
+
 .nav-links-wrapper {
   display: flex;
-  gap: 0.9rem;             
-  padding: 4px 8px;       
-  border-radius: 999px;    
+  gap: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 999px;
   background-color: var(--color-nav-background);
   display: none;
   justify-content: center;
@@ -40,11 +62,11 @@ nav {
 }
 
 .nav-links-wrapper .nav-link {
-  padding: 4px 8px;        
+  padding: 4px 8px;
   text-decoration: none;
   color: var(--color-text);
   font-size: 1.1rem;
-  font-weight: 400;   
+  font-weight: 400;
   border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -55,10 +77,10 @@ nav {
 
 .nav-link.active {
   background-color: var(--color-nav-link-active-bg);
-  color:  var(--color-nav-link-active-text);
-  padding: 6px 10px;       
+  color: var(--color-nav-link-active-text);
+  padding: 6px 10px;
   border-radius: 999px;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .expanded {
@@ -66,19 +88,18 @@ nav {
   flex-direction: column;
   position: absolute;
   top: var(--nav-height-mobile);
-  left: 0;             
-  width: 100%;         
-  height: auto;        
-  padding: 0.5rem 0;   
-  border-radius: 0;    
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0;
+  border-radius: 0;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
-  justify-content: flex-start; 
-  align-items: center; 
+  justify-content: flex-start;
+  align-items: center;
   z-index: 999;
 }
 
-/* DESKTOP MODE */
 @media screen and (min-width: 636px) {
 
   nav {
@@ -92,6 +113,10 @@ nav {
   }
 
   .hamburger {
+    display: none;
+  }
+
+  .path {
     display: none;
   }
 }

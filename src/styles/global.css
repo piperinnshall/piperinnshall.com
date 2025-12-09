@@ -11,18 +11,19 @@
   --color-background: #1e1e2e;
   --color-background-2: #181825;
 
+  --color-highlight: #cba6f7;
   --color-text: #cdd6f4;
   --color-text-2: #6c7086; 
   
-  --color-border: #cba6f7;
   --color-shadow: #11111b;
 
   --color-header-subtitle: #a6adc8;
 
+  --color-border: var(--color-highlight);
   --color-card-background: var(--color-background); 
   --color-card-social: var(--color-background); 
   --color-nav-background: var(--color-background-2); 
-  --color-nav-link-active-bg: var(--color-border);
+  --color-nav-link-active-bg: var(--color-highlight);
 
   --color-nav-link-active-text: var(--color-background); 
   --color-copyright-text: var(--color-text-2);
@@ -56,7 +57,7 @@ h1 {
 }
 
 .header-name {
-  color: var(--color-border);
+  color: var(--color-highlight);
 }
 
 /* Main content stretch */
@@ -75,8 +76,13 @@ p {
   color: var(--color-header-subtitle);
 }
 
-p strong {
-  color: var(--color-text);
+a {
+  color: var(--color-highlight);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--color-highlight);
+  font-weight: normal;
+  transition: color 0.3s ease;
 }
 
 .pdf-viewer {

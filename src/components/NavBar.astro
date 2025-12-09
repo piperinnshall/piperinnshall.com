@@ -2,10 +2,16 @@
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
 import '../styles/navbar.css';
+const currentPath = Astro.url.pathname;
 ---
 <header>
-    <nav>
-        <Hamburger />
-        <Navigation />
-    </nav>
-</header<>
+  <nav>
+    <div class="path">
+      <a class="home-button" href="/">~</a>
+      <span class="current-path">{currentPath}</span>
+    </div>
+    <Hamburger />
+    <Navigation />
+  </nav>
+</header>
+
