@@ -4,11 +4,13 @@ import '../styles/tag.css';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={` - ${frontmatter.title}`}>
+  <div class="contents">
     <div class="tags">
-        {frontmatter.tags.map((tag) => (
-            <p class="tag"><a href={`/tags/${tag}`}>#{tag}</a></p>
-        ))}
+      {frontmatter.tags.map((tag) => (
+      <p class="tag"><a href={`/tags/${tag}`}>#{tag}</a></p>
+      ))}
     </div>
     <slot />
+  </div>
 </BaseLayout>
 
