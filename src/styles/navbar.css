@@ -43,7 +43,7 @@ nav {
 .nav-links-wrapper .nav-link {
   text-decoration: none;
   color: var(--color-text);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   transition: color 1.2s ease;
 }

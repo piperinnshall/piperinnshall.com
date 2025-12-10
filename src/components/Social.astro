@@ -6,12 +6,17 @@ import linkedin from '../images/linkedin.svg';
 const { platform, username } = Astro.props;
 
 const images = {
-    github,
-    linkedin,
+github,
+linkedin,
 };
 ---
 
-<a class="social-link" href={`https://www.${platform}.com/${username}`}>
+<a 
+  class="social-link" 
+  href={`https://www.${platform}.com/${username}`} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  >
   <div class="icon" style={`--icon-url: url('${images[platform].src}')`}></div>
 </a>
 
