@@ -7,13 +7,15 @@ const pageTitle = " - projects";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  {allPosts.map((post) => (
-    <ProjectPost 
-      url={post.url} 
-      title={post.frontmatter.title} 
-      description={post.frontmatter.description} 
-      tags={post.frontmatter.tags} 
-    />
-  ))}
+  <div style="padding: 0.125rem;">
+    {allPosts.map((post) => (
+      <ProjectPost 
+        url={post.url} 
+        title={post.frontmatter.title} 
+        description={post.frontmatter.description} 
+        tags={post.frontmatter.tags} 
+      />
+    ))}
+  </div>
 </BaseLayout>
 

@@ -8,15 +8,14 @@
 
 :root {
   /* Base */
-  --color-background: #1e1e2e;
-  --color-background-2: #181825;
+  --color-background-2: #1e1e2e;
+  --color-background: #181825;
 
   --color-highlight: #cba6f7;
+  --color-highlight-2: #585b70;
   --color-hover: #f38ba8;
   --color-text: #cdd6f4;
   --color-text-2: #6c7086; 
-  
-  --color-shadow: #11111b;
 
   --color-header-subtitle: #a6adc8;
 
