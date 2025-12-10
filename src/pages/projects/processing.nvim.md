@@ -1,7 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'processing.nvim'
-description: 'A lightweight Neovim plugin that provides Processing support.'
+description: 'A lightweight Neovim plugin that adds full Processing support to
+Neovim. It lets you write, run, and navigate Processing sketches directly in
+neovim. '
 pubDate: 2025-12-10
 tags: ["lua", "processing", "neovim", "neovim-plugin", "nix", "ci-cd", "open-source", "collaboration"]
 ---

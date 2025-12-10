@@ -1,4 +1,29 @@
 ---
-const { title, url } = Astro.props
+const { title, url, description, tags } = Astro.props;
+import '../styles/posts.css';
+import '../styles/tag.css';
 ---
-<li><a href={url}>{title}</a></li>
+<li class="project-card">
+  <a href={url} class="project-link">
+    <div class="project-title">
+      {title}
+    </div>
+    <div class="project-description">
+      {description}
+    </div>
+    <div class="tags">
+      {tags?.map(tag => (
+        <p class="tag">
+          {/* Remove inner <a> and use click or styling */}
+          <span 
+            class="tag-link" 
+            onClick={() => window.location.href = `/tags/${tag}`}
+          >
+            #{tag}
+          </span>
+        </p>
+      ))}
+    </div>
+  </a>
+</li>
+

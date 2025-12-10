@@ -1,0 +1,76 @@
+.project-card {
+  background-color: var(--color-background-2);
+  color: var(--color-text);
+  border-radius: 9px;
+  border: 1px solid var(--color-shadow);
+  padding: 1rem;
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 105ch;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  transition: border 0.3s ease, transform 0.2s ease;
+
+  height: 200px;       /* fixed vertical limit */
+  flex: none;          /* prevents card from stretching */
+  overflow: hidden;    /* hides overflowing content */
+}
+
+/* Hover effect */
+.project-card:hover {
+  border: 1px solid var(--color-highlight);
+  transform: translateY(-2px);
+}
+
+/* Override global link styles for project card links */
+.project-card a {
+  color: inherit;            /* Use card text color */
+  text-decoration: none;     /* Remove underline */
+  display: flex;             /* Preserve flex layout */
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.project-card a:hover {
+  color: inherit;            /* Keep color on hover */
+  text-decoration: none;     /* Prevent hover underline */
+}
+
+/* Project title */
+.project-card .project-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-highlight);
+  margin-bottom: 0.5rem;
+}
+
+/* Project description */
+.project-card .project-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 65ch;
+  color: var(--color-text-2);
+  margin-bottom: 0.75rem;
+  overflow-y: auto; /* scroll if description is too long */
+}
+
+.project-card .tags {
+  display: flex;                /* horizontal layout */
+  flex-wrap: nowrap;            /* no wrapping */
+  gap: 0.5rem;
+  overflow-x: auto;             /* enable horizontal scroll */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+  align-items: center;          /* key: vertically center the tags */
+}
+
+.project-card .tags .tag {
+  flex: 0 0 auto;               /* prevent shrinking */
+  display: flex;
+  align-items: center;           /* vertically center content */
+  justify-content: center;
+}
+
+
