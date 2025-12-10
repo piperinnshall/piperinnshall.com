@@ -4,26 +4,24 @@ import '../styles/posts.css';
 import '../styles/tag.css';
 ---
 <li class="project-card">
-  <a href={url} class="project-link">
-    <div class="project-title">
-      {title}
-    </div>
-    <div class="project-description">
-      {description}
-    </div>
+  <div class="content-wrapper">
+    <a href={url} class="project-link">
+      <div class="project-title">
+        {title}
+      </div>
+      <div class="project-description">
+        {description}
+      </div>
+    </a>
     <div class="tags">
       {tags?.map(tag => (
         <p class="tag">
-          {/* Remove inner <a> and use click or styling */}
-          <span 
-            class="tag-link" 
-            onClick={() => window.location.href = `/tags/${tag}`}
-          >
+          <a href={`/tags/${tag}`} class="tag-link">
             #{tag}
-          </span>
+          </a>
         </p>
       ))}
     </div>
-  </a>
+  </div>
 </li>
 
